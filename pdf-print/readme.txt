@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: generate pdf, add pdf button, add print button, pdf plugin, pdf pages, print pages, generate pdf content, generate post pdf, pdf print, pdf print plugin, pdf custom post type, pdf content
 Requires at least: 6.2
-Tested up to: 6.9
-Stable tag: 2.4.6
+Tested up to: 7.0
+Stable tag: 2.4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,7 @@ https://www.youtube.com/watch?v=hJdWI8xkAI0
 * Add buttons to widget area
 * Add buttons via shortcode
 * Display count of PDF/Print generation
+* Gutenberg block for buttons
 * Set button type:
 	* Image
 	* Text
@@ -363,7 +364,12 @@ Replace `bestwebsoft_contact_form` with your shortcode.
 
 == Changelog ==
 
-= V2.4.6 - 23.01.2026 =
+= V2.4.7 - 26.04.2026 =
+* Update : All functionality was updated for WordPress 7.0.
+* NEW : Gutenberg block for buttons.
+* Update : BWS Panel section update.
+
+= V2.4.6 - 20.01.2026 =
 * Update : All functionality was updated for WordPress 6.9.
 * NEW : Count of PDF/Print generation.
 * Pro : Featured image shortcode has been added.
@@ -711,6 +717,11 @@ Replace `bestwebsoft_contact_form` with your shortcode.
 * NEW : Added the ability to output PDF and Print buttons on the type of page.
 
 == Upgrade Notice ==
+
+= V2.4.7 =
+* New features added.
+* The compatibility with new WordPress version updated.
+* Functionality improved.
 
 = V2.4.6 =
 * New features added.

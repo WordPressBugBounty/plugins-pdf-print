@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "pdf-print/pdf-print",
+  "version": "0.1.0",
+  "title": "PDF & Print by BestWebSoft",
+  "category": "widgets",
+  "description": "Generate PDF files and print WordPress posts/pages. Customize document header/footer styles and appearance",
+  "example": {},
+  "attributes": {
+    "showPdf": {
+      "type": "boolean",
+      "default": "1"
+    },
+    "showPrint": {
+      "type": "boolean",
+      "default": "1"
+    },
+    "display": {
+      "type": "string",
+      "default": "pdf,print"
+    }
+  },
+  "keywords": [
+    "pdf-print"
+  ],
+  "supports": {
+    "html": false
+  },
+  "textdomain": "pdf-print",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

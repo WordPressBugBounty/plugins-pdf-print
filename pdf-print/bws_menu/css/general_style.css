@@ -54,6 +54,10 @@
 	padding-top: 12px;
 	margin-top: 6px;
 }
+#adminmenu #toplevel_page_adblock-detector-by-bestwebsoft .wp-menu-image:before {
+	content: "\e994";
+	font-family: 'bwsicons' !important;
+}
 /* general styles */
 .bws_info {
 	color: #888;
@@ -73,6 +77,25 @@ body:not(.rtl) div.updated.bws-notice {
 .rtl div.updated.bws-notice {
 	border-right: 4px solid #ffba00;
 }
+@media screen and (max-width: 1600px) {
+	.bws_info {
+	  max-width: 400px;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+	.form-table td {
+	  vertical-align: top;
+	}
+}
+@media screen and (max-width: 1350px) {
+	label > .bws_info  {
+		display: block;
+	}
+	.bws_info {
+		vertical-align: text-top;
+	}
+}
+
 /*
 * styles for rate-support div on the settings page
 */

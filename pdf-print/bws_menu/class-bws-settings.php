@@ -521,13 +521,13 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 						( ! $this->is_multisite && isset( $bstwbsftwppdtplgns_options['custom_code'][ $file ] ) ) ) {
 						$this->custom_code_args[ "is_{$extension}_active" ] = true;
 					}
-					if ( is_writeable( $real_file ) ) {
+					if ( $wp_filesystem->is_writable( $real_file ) ) {
 						$this->custom_code_args[ "{$extension}_writeable" ] = true;
 					}
 				} else {
 					$this->custom_code_args[ "{$extension}_writeable" ] = true;
 					if ( 'php' === $extension ) {
-						$this->custom_code_args[ "content_{$extension}" ] = '<?php' . "\n" . "if ( ! defined( 'ABSPATH' ) ) exit;" . "\n" . "if ( ! defined( 'BWS_GLOBAL' ) ) exit;" . "\n\n" . '/* Start your code here */' . "\n";
+						$this->custom_code_args[ "content_{$extension}" ] = '<?php' . PHP_EOL . "if ( ! defined( 'ABSPATH' ) || ! defined( 'BWS_GLOBAL' ) ) exit;" . PHP_EOL . PHP_EOL . '/* Start your code here */' . PHP_EOL;
 					}
 				}
 			}
@@ -623,7 +623,7 @@ if ( ! class_exists( 'Bws_Settings_Tabs' ) ) {
 					</div>
 				</div>
 				<div class="inline" style="margin-top: 15px;">
-					<input type="submit" class="button button-primary" name="bws_pro_reset_custom_code" value="<?php esc_html_e( 'Erase all custom code', 'bestwebsoft' ); ?>" />
+					<input type="submit" class="button button-primary" name="bws_pro_reset_custom_code" value="<?php esc_html_e( 'Erase all custom code', 'bestwebsoft' ); ?>" onclick="return confirm( '<?php esc_html_e( 'Are you sure you want to delete all custom code?', 'bestwebsoft' ); ?>' );" />
 				</div>
 				<?php
 			} else {
